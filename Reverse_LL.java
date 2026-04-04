@@ -4,7 +4,7 @@ ip :  1 -> 2 -> 3 -> 4 ->5
 op : 5 -> 4 -> 3 -> 2 -> 1
 
 *******************************************************************************/
-class ListNode {
+ class ListNode {
     int val;
     ListNode next;
     ListNode(int val) { this.val = val; }
@@ -31,15 +31,14 @@ public class Reverse_LL
 	}}
 	
 
-    public static ListNode reverseList(ListNode head) {
+     static ListNode reverseList(ListNode head) {
        ListNode prev = null;
        ListNode curr = head;
-       ListNode nextval = null;
        while(curr != null){
-           nextval = curr.next;
+           ListNode next = curr.next;
            curr.next = prev;
            prev = curr;
-           curr = nextval;
+           curr = next;
     
         }
            return prev;
